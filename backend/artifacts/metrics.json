@@ -1,0 +1,164 @@
+{
+  "LogisticRegression": {
+    "display_name": "Logistic Regression (tuned)",
+    "is_active": true,
+    "accuracy": 0.7424,
+    "precision": 0.5096,
+    "recall": 0.7834,
+    "f1": 0.6175,
+    "confusion_matrix": [
+      [
+        753,
+        282
+      ],
+      [
+        81,
+        293
+      ]
+    ],
+    "params": {
+      "C": 0.1,
+      "class_weight": "balanced",
+      "max_iter": 1000
+    },
+    "notes": "Tuned via GridSearchCV optimizing F1. class_weight='balanced' significantly improved recall on the minority (churn) class, at the cost of some precision \u2014 an intentional trade given that missing a churner (FN) is costlier than a false alarm (FP)."
+  },
+  "KNN": {
+    "display_name": "K-Nearest Neighbors",
+    "is_active": false,
+    "accuracy": 0.7835,
+    "precision": 0.5956,
+    "recall": 0.5749,
+    "f1": 0.585,
+    "confusion_matrix": [
+      [
+        889,
+        146
+      ],
+      [
+        159,
+        215
+      ]
+    ],
+    "params": {
+      "n_neighbors": 75
+    }
+  },
+  "DecisionTree": {
+    "display_name": "Decision Tree",
+    "is_active": false,
+    "accuracy": 0.7374,
+    "precision": 0.5054,
+    "recall": 0.4973,
+    "f1": 0.5013,
+    "confusion_matrix": [
+      [
+        853,
+        182
+      ],
+      [
+        188,
+        186
+      ]
+    ],
+    "params": {
+      "random_state": 42
+    }
+  },
+  "RandomForest": {
+    "display_name": "Random Forest (tuned)",
+    "ensemble_type": "Bagging",
+    "is_active": false,
+    "accuracy": 0.7622,
+    "precision": 0.5377,
+    "recall": 0.7433,
+    "f1": 0.624,
+    "confusion_matrix": [
+      [
+        796,
+        239
+      ],
+      [
+        96,
+        278
+      ]
+    ],
+    "params": {
+      "class_weight": "balanced",
+      "max_depth": 10,
+      "min_samples_leaf": 1,
+      "min_samples_split": 10,
+      "n_estimators": 200
+    }
+  },
+  "AdaBoost": {
+    "display_name": "AdaBoost",
+    "ensemble_type": "Boosting",
+    "is_active": false,
+    "accuracy": 0.8055,
+    "precision": 0.6592,
+    "recall": 0.5535,
+    "f1": 0.6017,
+    "confusion_matrix": [
+      [
+        928,
+        107
+      ],
+      [
+        167,
+        207
+      ]
+    ],
+    "params": {
+      "random_state": 42
+    }
+  },
+  "GradientBoosting": {
+    "display_name": "Gradient Boosting",
+    "ensemble_type": "Boosting",
+    "is_active": false,
+    "accuracy": 0.7984,
+    "precision": 0.6531,
+    "recall": 0.5134,
+    "f1": 0.5749,
+    "confusion_matrix": [
+      [
+        933,
+        102
+      ],
+      [
+        182,
+        192
+      ]
+    ],
+    "params": {
+      "random_state": 42
+    }
+  },
+  "XGBoost": {
+    "display_name": "XGBoost",
+    "ensemble_type": "Boosting",
+    "is_active": false,
+    "accuracy": 0.7402,
+    "precision": 0.5067,
+    "recall": 0.8048,
+    "f1": 0.6219,
+    "confusion_matrix": [
+      [
+        742,
+        293
+      ],
+      [
+        73,
+        301
+      ]
+    ],
+    "params": {
+      "learning_rate": 0.1,
+      "max_depth": 3,
+      "n_estimators": 100,
+      "scale_pos_weight": 2.768561872909699
+    },
+    "notes": "Highest recall among all tuned models, but within noise of Logistic Regression and Random Forest on F1. Not selected as production model due to added deployment complexity and lower interpretability relative to Logistic Regression."
+  }
+}

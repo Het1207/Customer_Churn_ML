@@ -1,0 +1,248 @@
+{
+  "total_rows": 7043,
+  "total_columns": 21,
+  "churn_yes_count": 1869,
+  "churn_no_count": 5174,
+  "churn_rate_percent": 26.54,
+  "columns": [
+    {
+      "name": "customerID",
+      "type": "Categorical",
+      "description": "Unique identifier for each customer (not used for modeling).",
+      "example_values": [
+        "7590-VHVEG",
+        "5575-GNVDE",
+        "3668-QPYBK",
+        "7795-CFOCW",
+        "9237-HQITU"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "gender",
+      "type": "Categorical",
+      "description": "Customer's gender.",
+      "example_values": [
+        "Female",
+        "Male"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "SeniorCitizen",
+      "type": "Numerical",
+      "description": "Whether the customer is a senior citizen (1) or not (0).",
+      "example_values": [
+        "0",
+        "1"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "Partner",
+      "type": "Categorical",
+      "description": "Whether the customer has a partner.",
+      "example_values": [
+        "Yes",
+        "No"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "Dependents",
+      "type": "Categorical",
+      "description": "Whether the customer has dependents.",
+      "example_values": [
+        "No",
+        "Yes"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "tenure",
+      "type": "Numerical",
+      "description": "Number of months the customer has stayed with the company.",
+      "example_values": [
+        "1",
+        "34",
+        "2",
+        "45",
+        "8"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "PhoneService",
+      "type": "Categorical",
+      "description": "Whether the customer has phone service.",
+      "example_values": [
+        "No",
+        "Yes"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "MultipleLines",
+      "type": "Categorical",
+      "description": "Whether the customer has multiple phone lines.",
+      "example_values": [
+        "No phone service",
+        "No",
+        "Yes"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "InternetService",
+      "type": "Categorical",
+      "description": "Customer's internet service type.",
+      "example_values": [
+        "DSL",
+        "Fiber optic",
+        "No"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "OnlineSecurity",
+      "type": "Categorical",
+      "description": "Whether the customer has online security add-on.",
+      "example_values": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "OnlineBackup",
+      "type": "Categorical",
+      "description": "Whether the customer has online backup add-on.",
+      "example_values": [
+        "Yes",
+        "No",
+        "No internet service"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "DeviceProtection",
+      "type": "Categorical",
+      "description": "Whether the customer has device protection add-on.",
+      "example_values": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "TechSupport",
+      "type": "Categorical",
+      "description": "Whether the customer has tech support add-on.",
+      "example_values": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "StreamingTV",
+      "type": "Categorical",
+      "description": "Whether the customer has streaming TV service.",
+      "example_values": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "StreamingMovies",
+      "type": "Categorical",
+      "description": "Whether the customer has streaming movies service.",
+      "example_values": [
+        "No",
+        "Yes",
+        "No internet service"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "Contract",
+      "type": "Categorical",
+      "description": "The customer's contract term.",
+      "example_values": [
+        "Month-to-month",
+        "One year",
+        "Two year"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "PaperlessBilling",
+      "type": "Categorical",
+      "description": "Whether the customer uses paperless billing.",
+      "example_values": [
+        "Yes",
+        "No"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "PaymentMethod",
+      "type": "Categorical",
+      "description": "The customer's payment method.",
+      "example_values": [
+        "Electronic check",
+        "Mailed check",
+        "Bank transfer (automatic)",
+        "Credit card (automatic)"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "MonthlyCharges",
+      "type": "Numerical",
+      "description": "The amount charged to the customer monthly.",
+      "example_values": [
+        "29.85",
+        "56.95",
+        "53.85",
+        "42.3",
+        "70.7"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "TotalCharges",
+      "type": "Categorical",
+      "description": "The total amount charged to the customer over their tenure.",
+      "example_values": [
+        "29.85",
+        "1889.5",
+        "108.15",
+        "1840.75",
+        "151.65"
+      ],
+      "missing_count": 0
+    },
+    {
+      "name": "Churn",
+      "type": "Categorical",
+      "description": "Whether the customer churned (left the company).",
+      "example_values": [
+        "No",
+        "Yes"
+      ],
+      "missing_count": 0
+    }
+  ],
+  "cleaning_notes": [
+    "TotalCharges was stored as text and converted to numeric; 11 blank values that resulted were filled with the column median.",
+    "customerID was dropped before modeling \u2014 it carries no predictive signal.",
+    "Binary columns (gender, Partner, Dependents, PhoneService, PaperlessBilling) were label-encoded; multi-category columns were one-hot encoded with the first category dropped to avoid redundancy.",
+    "Only the three continuous numeric columns (tenure, MonthlyCharges, TotalCharges) were scaled with StandardScaler, fit on the training set only to prevent data leakage."
+  ]
+}
