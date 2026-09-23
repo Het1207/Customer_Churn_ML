@@ -1,5 +1,5 @@
 // api.js — Centralized API calls for the Churn Prediction app
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://customer-churn-ml-fgfh.onrender.com';
 
 async function apiFetch(path, options = {}) {
   const res = await fetch(`${BASE_URL}${path}`, options);
