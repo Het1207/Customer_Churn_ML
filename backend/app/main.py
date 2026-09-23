@@ -25,7 +25,7 @@ app = FastAPI(
 # ── CORS ──────────────────────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://customer-churn-ml-fgfh.onrender.com"],
+    allow_origins=["http://localhost:5173", "https://customer-churn-ml-three.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
