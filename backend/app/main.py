@@ -115,6 +115,12 @@ def single_model_metrics(model_name: str):
         )
     return data[model_name]
 
+@app.get("/")
+def root():
+    return {
+        "message": "Telco Churn Prediction API is running",
+        "status": "ok"
+    }
 
 @app.get("/health")
 def health():
